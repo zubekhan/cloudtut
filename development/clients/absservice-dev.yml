@@ -10,11 +10,11 @@ spring:
     config:
       fail-fast: true
     # To enable spring cloud bus feature
-    bus:
-      enabled: true
+    #bus:
+      #enabled: true
       # Optional for spring cloud bus tracing 
-      trace:
-        enabled: true
+      #trace:
+        #enabled: true
 
 #Eureka Server Cluster Ports   
 cloud:
@@ -39,7 +39,6 @@ management:
     web:
       exposure:
         include:
-        - bus-refresh,refresh
         - '*'
 
 # For logging pupose
