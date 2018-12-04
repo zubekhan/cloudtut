@@ -1,5 +1,4 @@
-message: The Learning Week! 
-#But Are You Aware About!
+message: The Learning Week! But Are You Aware About!
 spring:
 #RabbitMq Config for Spring Cloud Bus Setup
   rabbitmq:
@@ -7,9 +6,9 @@ spring:
     port: 5672
     username: guest
     password: guest
-  cloud:
-    config:
-      fail-fast: true
+  #cloud:
+    #config:
+      #fail-fast: true
     # To enable spring cloud bus feature
     #bus:
       #enabled: true
@@ -18,21 +17,21 @@ spring:
         #enabled: true
 
 #Eureka Server Cluster Ports   
-cloud:
-  peers:
-    default: 8760
-    port1: 8761
-    port2: 8762
-    port3: 8763
-    port4: 8764
+#cloud:
+  #peers:
+    #default: 8760
+    #port1: 8761
+    #port2: 8762
+    #port3: 8763
+    #port4: 8764
     
     
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://eureka-peer1:${cloud.peers.port1}/eureka/,http://eureka-peer2:${cloud.peers.port2}/eureka/,http://eureka-peer3:${cloud.peers.port3}/eureka/,http://eureka-peer4:${cloud.peers.port4}/eureka/
-  instance:  #instance id is the unique id used by eureka server to differentiate an instance among other instances of a service
-    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+#eureka:
+  #client:
+    #serviceUrl:
+      #defaultZone: http://eureka-peer1:${cloud.peers.port1}/eureka/,http://eureka-peer2:${cloud.peers.port2}/eureka/,http://eureka-peer3:${cloud.peers.port3}/eureka/,http://eureka-peer4:${cloud.peers.port4}/eureka/
+  #instance:  #instance id is the unique id used by eureka server to differentiate an instance among other instances of a service
+    #instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
 
 # For Actuators to enable refresh scope and other
 management:
@@ -47,7 +46,6 @@ logging:
   level:
     ROOT: INFO
     org.springframework.cloud.config: DEBUG
-    org.springframework.cloud.bus: TRACE
 
 #---
 #spring:
