@@ -7,32 +7,32 @@ spring:
     port: 5672
     username: guest
     password: guest
-  #cloud:
-    #config:
-      #fail-fast: true
+  cloud:
+    config:
+      fail-fast: true
     # To enable spring cloud bus feature
-    #bus:
-      #enabled: true
+    bus:
+      enabled: true
       # Optional for spring cloud bus tracing 
-      #trace:
-        #enabled: true
+      trace:
+        enabled: true
 
 #Eureka Server Cluster Ports   
-#cloud:
-  #peers:
-    #default: 8760
-    #port1: 8761
-    #port2: 8762
-    #port3: 8763
-    #port4: 8764
+cloud:
+  peers:
+    default: 8760
+    port1: 8761
+    port2: 8762
+    port3: 8763
+    port4: 8764
     
     
-#eureka:
-  #client:
-    #serviceUrl:
-      #defaultZone: http://eureka-peer1:${cloud.peers.port1}/eureka/,http://eureka-peer2:${cloud.peers.port2}/eureka/,http://eureka-peer3:${cloud.peers.port3}/eureka/,http://eureka-peer4:${cloud.peers.port4}/eureka/
-  #instance:  #instance id is the unique id used by eureka server to differentiate an instance among other instances of a service
-    #instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-peer1:${cloud.peers.port1}/eureka/,http://eureka-peer2:${cloud.peers.port2}/eureka/,http://eureka-peer3:${cloud.peers.port3}/eureka/,http://eureka-peer4:${cloud.peers.port4}/eureka/
+  instance:  #instance id is the unique id used by eureka server to differentiate an instance among other instances of a service
+    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
 
 # For Actuators to enable refresh scope and other
 management:
@@ -48,64 +48,64 @@ logging:
     ROOT: INFO
     org.springframework.cloud.config: DEBUG
 
-#---
-#spring:
-#  profiles: abs-one
-#eureka:
-#  instance:
-#    appname: abs-service
-#  client:
-#    fetchRegistry: true
+---
+spring:
+  profiles: abs-one
+eureka:
+  instance:
+    appname: absservice
+  client:
+    fetchRegistry: true
 #    serviceUrl:
 #      defaultZone: http://eureka-peer1:${cloud.peers.port1}/
-#server:
-#  port: 8080    
-#---
-#spring:
-#  profiles: abs-two
-#eureka:
-#  instance:
-#    appname: abs-service
-# client:
-#    fetchRegistry: true
+server:
+  port: 8080    
+---
+spring:
+  profiles: abs-two
+eureka:
+  instance:
+    appname: absservice
+ client:
+    fetchRegistry: true
 #    serviceUrl:
 #      defaultZone: http://eureka-peer1:${cloud.peers.port1}
-#server:
-#  port: 8085      
+server:
+  port: 8085      
 #---
-#spring:
-#  profiles: abs-three
-#eureka:
-#  instance:
-#    appname: abs-service
-#  client:
-#    fetchRegistry: true
+spring:
+  profiles: abs-three
+eureka:
+  instance:
+    appname: absservice
+  client:
+    fetchRegistry: true
 #    serviceUrl:
 #      defaultZone: http://eureka-peer1:${cloud.peers.port1}
-#server:
-#  port: 8082     
+server:
+  port: 8082     
 #---
-#spring:
-#  profiles: abs-four
-#eureka:
-#  instance:
-#    appname: abs-service
-#  client:
-#    fetchRegistry: true
+spring:
+  profiles: abs-four
+eureka:
+  instance:
+    appname: abs-service
+  client:
+    fetchRegistry: true
 #    serviceUrl:
 #      defaultZone: http://eureka-peer1:${cloud.peers.port1}
-#server:
-#  port: 8083      
+server:
+  port: 8083      
       
-#---
-#spring:
-#  profiles: abs-five
-#eureka:
-#  instance:
-#   appname: abs-service
-#  client:
-#    fetchRegistry: true
+---
+spring:
+  profiles: abs-five
+eureka:
+  instance:
+   appname: abs-service
+  client:
+    fetchRegistry: true
 #    serviceUrl:
 #      defaultZone: http://eureka-peer1:${cloud.peers.port1}
-#server:
-#  port: 8084
+server:
+  port: 8084
