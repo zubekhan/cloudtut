@@ -1,4 +1,4 @@
-message: The Learning Week! 
+fmessage: The Learning Week! 
 #But Are You Aware About!
 spring:
 #RabbitMq Config for Spring Cloud Bus Setup
@@ -48,64 +48,64 @@ logging:
     ROOT: INFO
     org.springframework.cloud.config: DEBUG
 
----
-spring:
-  profiles: abs-one
-eureka:
-  instance:
-    appname: absservice
-  client:
-    fetchRegistry: true
+#---
+#spring:
+#  profiles: abs-one
+#eureka:
+#  instance:
+#    appname: absservice
+#  client:
+#    fetchRegistry: true
 #    serviceUrl:
 #      defaultZone: http://eureka-peer1:${cloud.peers.port1}/
-server:
-  port: 8080    
----
-spring:
-  profiles: abs-two
-eureka:
-  instance:
-    appname: absservice
- client:
-    fetchRegistry: true
-#    serviceUrl:
-#      defaultZone: http://eureka-peer1:${cloud.peers.port1}
-server:
-  port: 8085      
+#server:
+#  port: 8080    
 #---
-spring:
-  profiles: abs-three
-eureka:
-  instance:
-    appname: absservice
-  client:
-    fetchRegistry: true
+#spring:
+#  profiles: abs-two
+#eureka:
+#  instance:
+#    appname: absservice
+# client:
+#    fetchRegistry: true
 #    serviceUrl:
 #      defaultZone: http://eureka-peer1:${cloud.peers.port1}
-server:
-  port: 8082     
+#server:
+#  port: 8085      
 #---
-spring:
-  profiles: abs-four
-eureka:
-  instance:
-    appname: abs-service
-  client:
-    fetchRegistry: true
+#spring:
+#  profiles: abs-three
+#eureka:
+#  instance:
+#    appname: absservice
+#  client:
+#    fetchRegistry: true
 #    serviceUrl:
 #      defaultZone: http://eureka-peer1:${cloud.peers.port1}
-server:
-  port: 8083      
+#server:
+#  port: 8082     
+#---
+#spring:
+#  profiles: abs-four
+#eureka:
+#  instance:
+#    appname: abs-service
+#  client:
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: http://eureka-peer1:${cloud.peers.port1}
+#server:
+#  port: 8083      
       
----
-spring:
-  profiles: abs-five
-eureka:
-  instance:
-   appname: abs-service
-  client:
-    fetchRegistry: true
+#---
+#spring:
+#  profiles: abs-five
+#eureka:
+#  instance:
+#   appname: abs-service
+#  client:
+#    fetchRegistry: true
 #    serviceUrl:
 #      defaultZone: http://eureka-peer1:${cloud.peers.port1}
-server:
-  port: 8084
+#server:
+#  port: 8084
