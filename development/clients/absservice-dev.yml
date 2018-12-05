@@ -1,5 +1,4 @@
-message: The Learning Week! 
-#But Are You Aware About!
+message: The Learning Week! But Are You Aware About!
 spring:
 #RabbitMq Config for Spring Cloud Bus Setup
   rabbitmq:
